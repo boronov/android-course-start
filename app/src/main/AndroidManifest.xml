@@ -13,6 +13,16 @@
         android:theme="@style/Theme.MyFirstApp"
         tools:targetApi="31">
         <activity
+            android:name="ru.appsmile.second.ManualActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="ru.appsmile.second.NewActivity"
+            android:exported="false" />
+        <activity
+            android:name="ru.appsmile.second.SeconActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
