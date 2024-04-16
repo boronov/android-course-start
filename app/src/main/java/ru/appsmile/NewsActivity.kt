@@ -20,8 +20,7 @@ class NewsActivity : AppCompatActivity() {
             StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         numberPanel?.adapter = NumberAdapter((1..100).toList())
 
-
-        ///
+        ///dfdf
 
     }
 }
