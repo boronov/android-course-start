@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ru.appsmile.ItemData
 import ru.appsmile.first.R
 
-class NumberAdapter(private val numberList: List<Int>) :
+class NumberAdapter(private val numberList: List<ItemData>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     class NumberViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -20,7 +21,7 @@ class NumberAdapter(private val numberList: List<Int>) :
         val imageView: ImageView = view.findViewById(R.id.image_view)
     }
 
-    override fun getItemViewType(position: Int): Int = if (numberList[position] % 2 == 0) {
+    override fun getItemViewType(position: Int): Int = if (numberList[position].number % 2 == 0) {
         RED_VIEW_TYPE
     } else {
         BLACK_VIEW_TYPE
@@ -57,13 +58,13 @@ class NumberAdapter(private val numberList: List<Int>) :
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when {
             holder is NumberViewHolder -> {
-                holder.textView.text = numberList[position].toString()
+                holder.textView.text = numberList[position].number.toString()
             }
 
             holder is NumberSecondViewHolder -> {
-                holder.textView.text = numberList[position].toString()
+                holder.textView.text = numberList[position].text
 
-                if (numberList[position] % 5 == 0) {
+                if (numberList[position].number % 5 == 0) {
                     holder.imageView.setImageResource(R.drawable.bg_first)
                 } else {
                     holder.imageView.setImageResource(R.drawable.bg_second)

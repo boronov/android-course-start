@@ -16,11 +16,7 @@ class NewsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_news)
 
         numberPanel = findViewById(R.id.recycler_view)
-        numberPanel?.layoutManager =
-            StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-        numberPanel?.adapter = NumberAdapter((1..100).toList())
-
-        ///dfdf
-
+        numberPanel?.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+        numberPanel?.adapter = NumberAdapter((1..100).toList().map { ItemData(it, "text") })
     }
 }
