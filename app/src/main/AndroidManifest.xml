@@ -13,11 +13,7 @@
         android:theme="@style/Theme.MyFirstApp"
         tools:targetApi="31">
         <activity
-            android:name="ru.appsmile.second.ManualActivity"
-            android:exported="true" />
-
-        <activity
-            android:name="ru.appsmile.NewsActivity"
+            android:name="ru.appsmile.SharedPreferencesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name="ru.appsmile.second.ManualActivity"
+            android:exported="true" />
+        <activity
+            android:name="ru.appsmile.NewsActivity"
+            android:exported="true">
+        </activity>
         <activity
             android:name="ru.appsmile.second.NewActivity"
             android:exported="false" />
